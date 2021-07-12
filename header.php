@@ -32,6 +32,7 @@ else{
 }
 
 ?>
+
 <div class="navbar">
         <!--LOGO-->
 

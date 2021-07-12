@@ -15,12 +15,15 @@ if(isset($_POST['loginUser']))
 
     if(mysqli_num_rows($loginQuery)==1)
     {
-        $_SESSION['uname']=$userName;
-        $_SESSION['pword'] = $password;
-        header("Location:index.php");
+        // $_SESSION['uname']=$userName;
+        // $_SESSION['pword'] = $password;
+
+        $_SESSION['uname']=$row['userName'];
+        $_SESSION['pword'] = $row['password'];
+        header("Location:header.php");
     }
     else
-    {heaader("Location:login.php?val=fail");
+    {header("Location:login.php?val=fail");
     }
    
 }
